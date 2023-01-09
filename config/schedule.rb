@@ -23,5 +23,7 @@
 set :output, "./log/cron_log.log"
 
 every 1.minutes do
-    runner "puts 'Hello World'"
+    runner "Starting the Cron Jon#{Time.now}"
+    runner "flipkart:scrap_the_product"
+    runner "----------------------------------"
 end

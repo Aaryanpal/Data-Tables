@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Employees</h1>
+<h1>Flipkart Scrapper</h1>
 
 <%= form_with url:"",method: :get, data: {turbo_frame: "employees", turbo_action: "advance"} do |form| %>
 Show <%= form.select :count, options_for_select([10, 25, 50, 100], selected: params[:count]), {}, { onchange: "this.form.requestSubmit()" } %>
@@ -9,11 +9,11 @@ Search <%= form.search_field :query, value: params[:query], oninput: "this.form.
 <%= turbo_frame_tag "employees" do%>
   <div class = "tables">
   <div class = "table-header-group">
-    <%= sort_link_to "Name", :name, class: "table-cell pr-4"%>
-    <%= sort_link_to "Position", :position, class: "table-cell pr-4"%>
-    <%= sort_link_to "Office", :office, class: "table-cell pr-4"%>
-    <%= sort_link_to "Age", :age, class: "table-cell pr-4"%>
-    <%= sort_link_to "Start Date", :start_date, class: "table-cell pr-4"%>
+    <%= sort_link_to "Model-Name", :name, class: "table-cell pr-4"%>
+    <%= sort_link_to "Current-Price", :position, class: "table-cell pr-4"%>
+    <%= sort_link_to "Original-Price", :office, class: "table-cell pr-4"%>
+    <%= sort_link_to "Discount", :age, class: "table-cell pr-4"%>
+    <%= sort_link_to "Rating", :start_date, class: "table-cell pr-4"%>
   </div>
   
   <%= render @employees %>

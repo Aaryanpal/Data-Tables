@@ -18,8 +18,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_144407) do
     t.string "name"
     t.string "position"
     t.string "office"
-    t.integer "age"
-    t.date "start_date"
+    t.string "age"
+    t.string "start_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
