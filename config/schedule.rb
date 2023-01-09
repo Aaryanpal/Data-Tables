@@ -24,7 +24,7 @@ set :output, "./log/cron_log.log"
 set :environment, 'production'
 
 
-every 2.hours do
+every 5.minutes do
     runner "Starting the Cron Jon#{Time.now}"
     rake "flipkart:scrap_the_product"
     command "echo -----------------------"
