@@ -16,9 +16,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_144407) do
 
   create_table "employees", force: :cascade do |t|
     t.string "name"
-    t.string "position"
-    t.string "office"
-    t.string "age"
+    t.integer "position"
+    t.integer "office"
+    t.integer "age"
     t.string "start_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

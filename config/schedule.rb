@@ -21,9 +21,11 @@
 # Learn more: http://github.com/javan/whenever
 
 set :output, "./log/cron_log.log"
+set :environment, 'development'
 
-every 1.minutes do
+
+every 2.hours do
     runner "Starting the Cron Jon#{Time.now}"
-    runner "flipkart:scrap_the_product"
-    runner "----------------------------------"
+    rake "flipkart:scrap_the_product"
+    command "echo -----------------------"
 end
