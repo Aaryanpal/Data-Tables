@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+## Working
+
+<img src = "doc/Readme.gif" alt = "working">
