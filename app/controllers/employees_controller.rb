@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: %i[ show edit update destroy ]
+  # before_action :set_employee, only: %i[ show edit update destroy ]
 
   # GET /employees or /employees.json
   def index
@@ -56,6 +56,9 @@ class EmployeesController < ApplicationController
     end
   end
 
+  def home
+    
+  end
   # DELETE /employees/1 or /employees/1.json
   def destroy
     @employee.destroy

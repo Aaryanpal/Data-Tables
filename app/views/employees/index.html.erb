@@ -1,23 +1,28 @@
-<p style="color: green"><%= notice %></p>
+<div class="container w-full md:w-4/5 xl:w-3/5  mx-auto px-2">
 
-<h1>Flipkart Scrapper</h1>
+<h1 class="flex items-center font-sans font-bold break-normal text-indigo-500 px-2 py-8 text-xl md:text-2xl">
+Flipkart Scrapper
+		</h1>
 
-<%= form_with url:"",method: :get, data: {turbo_frame: "employees", turbo_action: "advance"} do |form| %>
+<%= form_with url:"",method: :get ,data: {turbo_frame: "employees", turbo_action: "advance"} do |form| %>
 Show <%= form.select :count, options_for_select([10, 25, 50, 100], selected: params[:count]), {}, { onchange: "this.form.requestSubmit()" } %>
-Search <%= form.search_field :query, value: params[:query], oninput: "this.form.requestSubmit()" %>
+Search <%= form.search_field :query,placeholder: "Search your Product",class: "border",value: params[:query],oninput: "this.form.requestSubmit()" %>
 <%end%>    
 <%= turbo_frame_tag "employees" do%>
   <div class = "tables">
   <div class = "table-header-group">
-    <%= sort_link_to "Model-Name", :name, class: "table-cell pr-4"%>
-    <%= sort_link_to "Categories", :categories, class: "table-cell pr-4"%>
-    <%= sort_link_to "Current-Price", :position, class: "table-cell pr-4"%>
-    <%= sort_link_to "Original-Price", :office, class: "table-cell pr-4"%>
-    <%= sort_link_to "Discount", :age, class: "table-cell pr-4"%>
-    <%= sort_link_to "Rating", :start_date, class: "table-cell pr-4"%>
+    <%= sort_link_to "Model-Name", :name, class: "table-cell pr-4 font-semibold"%>
+    <%= sort_link_to "Categories", :categories, class: "table-cell pr-4 font-semibold"%>
+    <%= sort_link_to "Current-Price", :position, class: "table-cell pr-4 font-semibold"%>
+    <%= sort_link_to "Original-Price", :office, class: "table-cell pr-4 font-semibold"%>
+    <%= sort_link_to "Discount", :age, class: "table-cell pr-4 font-semibold"%>
+    <%= sort_link_to "Rating", :start_date, class: "table-cell pr-4 font-semibold"%>
   </div>
   
   <%= render @employees %>
   </div>
-  <%== pagy_nav @pagy%>
+  <br>
+  <br>
+  <%== render partial: 'bootstrap_nav', locals: {pagy: @pagy} %>
     <% end %>
+</div>
