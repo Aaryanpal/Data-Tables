@@ -76,5 +76,5 @@ end
 gem "faker", "~> 3.1"
 
 gem "pagy", "~> 6.0"
-
+gem "net-http"
 gem "pg_search", "~> 2.3"
