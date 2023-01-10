@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   database: railway
-  port: 6662
+  port: 7630
   username: postgres
-  password: yJtSa8Ymc7ttnBAjnQ8Z
+  password: 4JwYm8qmmL602S2TXPls

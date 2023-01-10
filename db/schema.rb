@@ -25,10 +25,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_144407) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "homes", force: :cascade do |t|
-    t.string "index"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
