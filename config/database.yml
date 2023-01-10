@@ -74,7 +74,7 @@ test:
 # URL environment variable explicitly:
 #
   production:
-    url: "postgresql://postgres:yJtSa8Ymc7ttnBAjnQ8Z@containers-us-west-161.railway.app:6662/railway"
+    url: Rails.application.credentials[:database_url]
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
